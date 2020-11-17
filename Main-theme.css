@@ -1,0 +1,1192 @@
+/* Основной файл */
+@import url(https://shiki-theme.web.app/import/main.css);
+/* Стили обложки профиля */
+@import url(https://shiki-theme.web.app/import/profile-cover.css);
+/* Фиксированные размеры постеров */
+@import url(https://css-club.web.app/css/fixed_cover.min.css);
+
+
+
+/* Настройки переменных темы */
+@media { 
+  :root {
+    /* Цвета текстов */
+    --color-text-primary: #E3E3E3;
+    --color-text-secondary: #B9B9B9;
+    --color-text-hint: #9A9B9A;
+    --color-text-disabled: #777877;
+    --color-overlay-text-hovered: rgba(227, 227, 227, 0.08);
+    --color-overlay-text-selected: rgba(227, 227, 227, 0.10);
+    --color-overlay-text-pressed: rgba(227, 227, 227, 0.12);
+    /* Цвет ссылок */
+    --color-link: #802FB3;
+    --color-link-hover: #CD2397;
+    --color-link-active: #FF2CBD;
+    /* Основной цвет */
+    --color-primary: #802FB3;
+    --color-text-on-primary: #000000;
+    --color-primary-reduced: #CF90FF;
+    --color-primary-hovered: #CD2397;
+    --color-primary-pressed: #FF2CBD;
+    --color-overlay-primary-hovered: rgba(227, 227, 227, 0.08);
+    --color-overlay-primary-selected:rgba(227, 227, 227, 0.10);
+    --color-overlay-primary-pressed: rgba(227, 227, 227, 0.12);
+    /* Акцентирующий цвет */
+    --color-accent: #802FB3;
+    --color-text-on-accent: #000000;
+    --color-accent-reduced: #CF90FF;
+    --color-accent-fade: #802FB3;
+    --color-overlay-accent-hovered: rgba(227, 227, 227, 0.08);
+    --color-overlay-accent-selected: rgba(227, 227, 227, 0.10);
+    --color-overlay-accent-pressed: rgba(227, 227, 227, 0.12);
+    /* Фоновые цвета */
+    --color-background: rgba(0, 0, 0, 0.9);
+    --color-background-translucent: rgba(36, 37, 36, 0.9);
+    --color-background-dialog: #000000;
+    --color-surface: #2E2F2E;
+    --color-surface-hover: #3F403F;
+    --color-surface-active: #474847;
+    --color-border: #3E3F3E;
+    /* Цвета верхнего меню */
+    --color-menu-background: #313231;
+    --color-menu-background-fade: rgba(49, 50, 49, 0.99);
+    --color-menu-text-primary: #E4E4E4;
+    --color-menu-text-disabled: #7F807F;
+    --color-menu-icon: #CECECE;
+    --color-menu-search: #4A4B4A;
+    --color-menu-search-fade: rgba(228, 228, 228, 0.12);
+    --color-menu-background-hover: #414241;
+    --color-menu-background-active: #4A4B4A;
+    /* Цвета кнопок списков */
+    --color-planned: #4B4C4B;
+    --color-onhold: #7B8084;
+    --color-watching: #4F91E8;
+    --color-rewatching: #4F91E8;
+    --color-completed: #66BB6A;
+    --color-dropped: #EF5350; 
+    /* Обложка профиля */
+    --user-cover:url(https://i.ibb.co/LxmZjK9/image.jpg);
+    /* Фон сайта */
+    --user-background: url(https://images.wallpapersden.com/image/download/purple-hysteresis-abstract_63378_3840x2400.jpg);
+    /* Шрифт на сайте */
+    --font-main: 'Balsamiq Sans';
+    --font-alt: var(--font-main);
+  }
+}
+
+
+
+/* Моя обложка в профиле */
+.p-profiles .profile-head::before {
+  display: block; 
+  background-position: center 50%;
+}
+
+
+.p-profiles .profile-head .c-brief header h1 {
+  font: 54px 'Heiti SC';
+}
+
+.p-profiles .profile-head .c-brief .head .misc span, 
+.p-profiles .profile-head .c-brief .notice,
+.subheadline > a::before, 
+.b-to-top.active .arrow, 
+.b-to-top.active .slide, 
+.b-feedback {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .l-page .is-own-profile .x199 .l-content, 
+  .l-page .menu-slide-outer.x199 .menu-slide-inner .l-content {
+    max-width: calc(100% - 250px);
+  }
+  
+  .l-page .is-own-profile .x199 .l-menu, 
+  .l-page .menu-slide-outer.x199 .menu-slide-inner .l-menu {
+    min-width: 215px;
+  }
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .l-page .block.is-own-profile .b-options-floated.mobile-phone {
+    position: initial;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .cc-related-authors .c-column:not(.c-authors) .subheadline {
+    display: inline;
+    bottom: 4rem;
+  }
+  
+  .cc-related-authors .c-column.block_m .b-options-floated.mobile-phone {
+    position: initial;
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .p-db_entries-works .b-options-floated.mobile-phone {
+    position: initial;
+  }
+}
+
+.stat_names .stat_name > a::before {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0.55rem 0.5rem 0.75rem 0;
+}
+
+.b-options-floated.mobile-desktop {
+  justify-content: flex-start;
+}
+
+.slPlayFreePlayButton {
+  margin-top: 2rem !important;
+}
+
+.b-hot_topics-v2 .b-link:active {
+  background-color: var(--color-surface-active);
+}
+
+.b-dialog:hover .to_dialog,
+.b-hot_topics-v2 .b-link:focus,
+a.name:focus {
+  outline: none;
+}
+
+.editor-container .b-input.text.optional.style_css .editor-expand,
+.editor-container .b-input.text.optional.style_css .editor-collapse {
+  border-bottom: none;
+}
+
+.p-animes-show .studio-logo, 
+.p-mangas-show .studio-logo, 
+.p-ranobe-show .studio-logo {
+  background-color: white;
+}
+
+.b-add_to_list .expanded-options .remove-trigger .text {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 767px) {
+  .b-options-floated.before-buttons-3 {
+    padding-right: 152px;
+  }
+}
+
+.bar.horizontal .line .bar-container .bar {
+  border-radius: 0px 12px 12px 0px; 
+  font-weight: bold;
+}
+
+.bar.vertical .line .bar-container .value {
+  color: #000000; 
+  font-weight: bold;
+  font-size: 0.725em;
+}
+
+.bar.vertical .line .bar-container .value.mini {
+  color: #000000; 
+  font-weight: bold;
+  font-size: 0.5em;
+}
+
+@media (max-width: 599px) {
+  .bar.vertical .line .bar-container .value {
+    font-size: 0.575em;
+  }
+  
+  .bar.vertical .line .bar-container .value.mini {
+    font-size: 0.4em;
+  }
+}
+
+.cc-2 .block_m .block .change-password > a::after,
+.b-shiki_editor footer .unpreview:not(.link)::after {
+  display: none;
+}
+
+.p-profiles-show .achievements .header .size {
+  font-weight: bold;
+}
+
+.b-catalog_entry-tooltip .inner .line.name {
+  margin-bottom: 8px;
+}
+
+.b-catalog_entry-tooltip .inner a.name {
+  font-size: 1rem;
+}
+
+.b-catalog_entry-tooltip .inner .text {
+  font-size: 0.85rem;
+}
+
+.b-db_entry > div:last-child .text,
+.b-comment .inner .body {
+  font-size: 0.9rem;  
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.tipsy-inner {
+  background: var(--color-menu-background);
+  box-shadow: 0 0 10px rgba(207, 144, 255, 0.7);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.tipsy {
+  opacity: 1 !important;
+}
+
+.l-page .profile-content .about.block .image-decor::before {
+  visibility: hidden;
+}
+
+.l-page .profile-content .about.block > div:nth-last-child(3) {
+  display: none;
+}
+
+.l-page .profile-content .about.block > div:nth-last-child(2) > a {
+  padding: .59375rem 1rem;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+
+
+/* Анимированный график активности */
+.activity .graph.vertical .line .bar {
+  border-radius: 30px 30px 0px 0px;
+  box-sizing: content-box;
+  transform: translateY(1px);
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  animation-name: activity;
+}
+
+.activity .graph.vertical .line .bar:hover {
+  transform: none !important;
+}
+
+.activity .graph.vertical .line:nth-child(1) .bar { animation-delay: -6.8s; }
+.activity .graph.vertical .line:nth-child(2) .bar { animation-delay: -6.6s; }
+.activity .graph.vertical .line:nth-child(3) .bar { animation-delay: -6.4s; }
+.activity .graph.vertical .line:nth-child(4) .bar { animation-delay: -6.2s; }
+.activity .graph.vertical .line:nth-child(5) .bar { animation-delay: -6.0s; }
+.activity .graph.vertical .line:nth-child(6) .bar { animation-delay: -5.8s; }
+.activity .graph.vertical .line:nth-child(7) .bar { animation-delay: -5.6s; }
+.activity .graph.vertical .line:nth-child(8) .bar { animation-delay: -5.4s; }
+.activity .graph.vertical .line:nth-child(9) .bar { animation-delay: -5.2s; }
+.activity .graph.vertical .line:nth-child(10) .bar { animation-delay: -5.0s; }
+.activity .graph.vertical .line:nth-child(11) .bar { animation-delay: -4.8s; }
+.activity .graph.vertical .line:nth-child(12) .bar { animation-delay: -4.6s; }
+.activity .graph.vertical .line:nth-child(13) .bar { animation-delay: -4.4s; }
+.activity .graph.vertical .line:nth-child(14) .bar { animation-delay: -4.2s; }
+.activity .graph.vertical .line:nth-child(15) .bar { animation-delay: -4.0s; }
+.activity .graph.vertical .line:nth-child(16) .bar { animation-delay: -3.8s; }
+.activity .graph.vertical .line:nth-child(17) .bar { animation-delay: -3.6s; }
+.activity .graph.vertical .line:nth-child(18) .bar { animation-delay: -3.4s; }
+.activity .graph.vertical .line:nth-child(19) .bar { animation-delay: -3.2s; }
+.activity .graph.vertical .line:nth-child(20) .bar { animation-delay: -3.0s; }
+.activity .graph.vertical .line:nth-child(21) .bar { animation-delay: -2.8s; }
+.activity .graph.vertical .line:nth-child(22) .bar { animation-delay: -2.6s; }
+.activity .graph.vertical .line:nth-child(23) .bar { animation-delay: -2.4s; }
+.activity .graph.vertical .line:nth-child(24) .bar { animation-delay: -2.2s; }
+.activity .graph.vertical .line:nth-child(25) .bar { animation-delay: -2.0s; }
+.activity .graph.vertical .line:nth-child(26) .bar { animation-delay: -1.8s; }
+.activity .graph.vertical .line:nth-child(27) .bar { animation-delay: -1.6s; }
+.activity .graph.vertical .line:nth-child(28) .bar { animation-delay: -1.4s; }
+.activity .graph.vertical .line:nth-child(29) .bar { animation-delay: -1.2s; }
+.activity .graph.vertical .line:nth-child(30) .bar { animation-delay: -1.0s; }
+.activity .graph.vertical .line:nth-child(31) .bar { animation-delay: -0.8s; }
+.activity .graph.vertical .line:nth-child(32) .bar { animation-delay: -0.6s; }
+.activity .graph.vertical .line:nth-child(33) .bar { animation-delay: -0.4s; }
+.activity .graph.vertical .line:nth-child(34) .bar { animation-delay: -0.2s; }
+
+@keyframes activity {
+  0%, 100% {
+    background-color: var(--color-primary);
+    transform: translateY(1px);
+  }
+  50% {
+    background-color: var(--color-primary-reduced);
+    transform: translateY(12px);
+  }
+}
+
+
+
+/* Вкладки */
+.u-tabs [data-tab-switch] {
+  transition: 250ms ease-in-out;
+  opacity: 0.5;
+}
+
+.u-tabs .active[data-tab-switch] {
+  transition: 250ms ease-in-out;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .u-tabs [data-tab-switch]:hover {
+    transform: translateY(-7px);
+    opacity: 0.65;
+  }
+  
+  .u-tabs .active[data-tab-switch]:hover {
+    transform: none;
+    opacity: 1;
+  }
+  
+  .b-button:hover {
+    background: transparent;
+  }
+}
+
+
+
+/* Полосы прокрутки */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+  }
+    
+  ::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+    
+  ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    background-color: #737373;
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #8D8D8D;
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #9A9A9A;
+  }
+  
+  ::-webkit-resizer {
+    display: none;
+  }
+}
+
+
+
+/* CSS редактор */
+.cm-s-solarized.cm-s-light {
+  background-color: #1F2123;
+  color: #9EB8C7;
+  text-shadow: none;
+  font-size: 14px;
+}
+
+.b-edit_styles .edit_style .style_css .CodeMirror, 
+.b-edit_styles .new_style .style_css .CodeMirror {
+  border: 1px solid #000000;
+}
+
+.b-edit_styles .edit_style .style_css .CodeMirror.CodeMirror-fullscreen, 
+.b-edit_styles .new_style .style_css .CodeMirror.CodeMirror-fullscreen {
+  resize: none;
+}
+
+.cm-s-solarized.cm-s-light .CodeMirror-gutters {
+  background-color: #282E33;
+}
+
+.cm-s-solarized .cm-number {
+  color: #8f6fEC;
+}
+
+.cm-s-solarized .cm-property {
+  color: #2BB39B;
+}
+
+.editor-container .buttons.m15 {
+  position: fixed;
+  top: 75px;
+  right: 25px;
+  z-index: 100;
+}
+
+.editor-container > div:nth-child(4) {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) and (display-mode: fullscreen) {
+  .b-edit_styles .edit_style .style_css .CodeMirror, 
+  .b-edit_styles .new_style .style_css .CodeMirror {
+    position: fixed;
+    border: none;
+    height: calc(100vh - 56px);
+    z-index: 99;
+    top: 56px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+
+
+/* BBCode редактор */
+.b-shiki_editor.size-xl .body .editor > textarea {
+  font-family: 'DejaVu Sans Mono';
+  font-size: 13px;
+  border: 1px solid #000000;  
+}
+
+
+
+/* Отображение кода без переноса длинных строк */
+.p-achievements-global code {
+  white-space: pre;
+}
+
+.p-achievements-global .b-code-v2::before {
+  position: sticky;
+  float: right;
+  left: 111%;
+  top: 0;
+  right: 0;
+}
+
+
+
+/* Верхнее меню */
+.l-top_menu-v2 .menu-logo > a {
+  font-family: 'Segoe Print';
+  padding-left: 16px;
+}
+
+.l-top_menu-v2 .menu-logo > a:hover {
+  background: var(--color-menu-background-hover);
+  height: 56px;
+}
+
+.l-top_menu-v2 .menu-logo > a:active {
+  background: var(--color-menu-background-active);
+}
+
+.l-top_menu-v2 {
+  padding: 0;
+}
+
+
+
+/* Спойлеры */
+.b-spoiler_block > span {
+  font-size: 0.95rem;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+
+
+/* Настройки постеров в блоке "О себе" */
+@media screen and (max-width: 480px) {
+  .cc-8-g15>.c-column {
+    width: 23.875%;
+  }
+  
+  .cc-8-g15>.c-column:nth-child(3n) {
+    margin-right: 1.5%;
+  }
+  
+  .cc-8-g15>.c-column:nth-child(3n+1) {
+    clear: none;
+  }
+  
+  .cc-8-g15>.c-column:nth-child(4n) {
+    margin-right: 0;
+  }
+  
+  .cc-8-g15>.c-column:nth-child(4n+1) {
+    clear: left;
+  }
+}
+
+
+
+/* Различные заголовки, кнопки и т.д. */
+.headline > a, 
+.midheadline > a, 
+.subheadline > a,
+.b-button, 
+a.b-button + .b-js-link, 
+a.b-button + .cancel, 
+.b-form .cancel, 
+.b-poll .poll-actions .abstain, 
+.b-shiki_editor footer .unpreview:not(.link), 
+.b-shiki_editor footer .cancel, 
+.b-topic-preview > .editor-container .hide, 
+.b-contest_match .vs .actions .action span, 
+.p-profiles-show .b-stats_bar.anime a.title, 
+.p-profiles-show .b-stats_bar.manga a.title, 
+.p-user_rates .mylist-block + .block + .block + .block > .b-list > li > a, 
+.b-collection-filters > .block:nth-child(3) > .b-list > li > a, 
+.b-form input[type=submit], 
+.b-link_button.dark, 
+.b-poll .poll-actions .vote, 
+.b-shiki_editor .links .b-button.ok, 
+.b-shiki_editor .images .b-button.ok, 
+.b-shiki_editor .quotes .b-button.ok, 
+.b-shiki_editor .upload .b-button.ok, 
+.b-contests-menu .results, 
+.p-profiles-edit .account .change-password a, 
+.b-link_button, 
+.p-dashboards-show .b-forums > .b-link_button.maxi::after {
+  font-size: 0.925rem;
+}
+
+
+/* Изменение цветов различных ссылок */
+.editor-container .b-input.text.optional.style_css .editor-expand,
+.editor-container .b-input.text.optional.style_css .editor-collapse,
+.cc-2 .block_m .block .reset-password > a,
+.b-db_entry-variant-list_item .info .name .b-link,
+.b-catalog_entry .cover .title,
+.b-catalog_entry-tooltip .inner a.name,
+.b-topic .inner .name-date a.name,
+.p-dashboards-show .cc-news .c-news_topics .b-topic .name-date a {
+  color: var(--color-link) !important;
+}
+
+.editor-container .b-input.text.optional.style_css .editor-expand:hover,
+.editor-container .b-input.text.optional.style_css .editor-collapse:hover,
+.cc-2 .block_m .block .reset-password > a:hover,
+.b-db_entry-variant-list_item .info .name .b-link:hover,
+.b-catalog_entry .cover .title:hover,
+.b-catalog_entry-tooltip .inner a.name:hover,
+.b-topic .inner .name-date a.name:hover,
+.p-dashboards-show .cc-news .c-news_topics .b-topic .name-date a:hover,
+.tooltip-inner .b-link:hover,
+.text .b-link:hover {
+  color: var(--color-link-hover) !important;
+}
+
+.editor-container .b-input.text.optional.style_css .editor-expand:active,
+.editor-container .b-input.text.optional.style_css .editor-collapse:active,
+.cc-2 .block_m .block .reset-password > a:active,
+.b-db_entry-variant-list_item .info .name .b-link:active,
+.b-catalog_entry .cover .title:active,
+.b-catalog_entry-tooltip .inner a.name:active,
+.b-topic .inner .name-date a.name:active,
+.p-dashboards-show .cc-news .c-news_topics .b-topic .name-date a:active,
+.tooltip-inner .b-link:active,
+.text .b-link:active {
+  color: var(--color-link-active) !important;
+}
+
+.b-topic .inner .body-truncated .b-link,
+.b-topic.b-topic-minified .inner .body .b-link,
+.tooltip-inner .b-link,
+.text .b-link {
+  color: #CC4EDD !important
+}
+
+.b-mention {
+  color: var(--color-link) !important;
+}
+
+.b-mention:hover {
+  color: var(--color-link-hover) !important;
+}
+
+.b-mention:active {
+  color: var(--color-link-active) !important;
+}
+
+
+
+/* Список избранного с названиями поверх картинки */
+.cc-favourites.d-cutted_covers .b-catalog_entry .cover .title.two_lined {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;	
+  margin: 0 auto;
+  padding: 1.5rem 0.375rem 0.375rem 0.375rem;	
+  top: 0;	
+  left: 0;	
+  right: 0;	
+  bottom: 0;
+  max-height: none;
+  background: rgba(0, 0, 0, 0.35);
+  color: #FAFAFA !important;
+  text-align: center;		
+  font-size: 0.0rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  transition: 0.25s ease-in-out;
+  will-change: transform;	
+  opacity: 0;
+}
+
+.cc-favourites.d-cutted_covers .b-catalog_entry:hover .cover .title.two_lined {	
+  padding-top: 0.375rem;	
+  text-decoration: none;	
+  opacity: 1;	
+}
+
+/*
+@media (min-width: 1024px) {
+  .cc-favourites.d-cutted_covers .b-catalog_entry .cover .title.two_lined {
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 0.825rem;
+  }
+}*/
+
+
+
+/* Список постеров с названиями поверх картинки */
+.s-container .b-catalog_entry .cover .title.two_lined {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;		
+  margin: 0 auto;
+  padding: 1.5rem 0.375rem 0.375rem 0.375rem;
+  top: 0;	
+  left: 0;	
+  right: 0;	
+  bottom: 0;
+  max-height: none;		
+  background: rgba(0, 0, 0, 0.35);
+  color: #FAFAFA !important;
+  text-align: center;	
+  font-size: 0.0rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  transition: 0.25s ease-in-out;
+  will-change: transform;
+  opacity: 0;	
+}	
+
+.s-container .b-catalog_entry:hover .cover .title.two_lined {	
+  padding-top: 0.375rem;	
+  text-decoration: none;	
+  opacity: 1;	
+}
+
+/*
+@media (min-width: 1024px) {
+  .s-container .b-catalog_entry .cover .title.two_lined {
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 0.825rem;
+  }
+}*/
+
+.s-container .cc-9-g15 > .c-column,	
+.s-container .cc-8-g15 > .c-column,	
+.s-container .cc-7-g15 > .c-column,	
+.s-container .cc-6-g15 > .c-column {	
+  margin-bottom: 5px;	
+}	
+
+@media (min-width: 768px) {	
+  .s-container .cc-9-g15 > .c-column,	
+  .s-container .cc-8-g15 > .c-column,	
+  .s-container .cc-7-g15 > .c-column,	
+  .s-container .cc-6-g15 > .c-column {	
+    margin-bottom: 15px;	
+  }	
+}
+
+
+
+/* Названия общих и жанровых достижений при наведении курсора */
+#profiles_show .b-achievement.is-badge::before {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.5rem 0.375rem 0.375rem 0.375rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  color: #FAFAFA !important;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word; 
+  font-size: 0.825rem;	
+  line-height: 1rem;
+  transition: 0.25s ease-in-out;
+  will-change: transform;
+  opacity: 0; 
+}
+
+#profiles_show .b-achievement.is-badge:hover:before {
+  padding-top: 0.375rem;
+  opacity: 1;
+}
+
+
+
+/* Нормальное отображение франшизных достижений */
+@media screen and (max-width: 767px) {
+  .b-options-floated.mobile-phone {
+    position: absolute;
+    margin-top: 16px;    
+  }
+}
+
+@media (min-width: 480px) {
+  .p-achievements-index .cc-franchises-genres .c-franchises .cc {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(200, max-content);
+    padding-bottom: 1375%;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-achievements-index .cc-franchises-genres .c-franchises .cc {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(200, max-content);
+    padding-bottom: 620%;
+  }
+}
+
+@media (min-width: 960px) {
+  .p-achievements-index .cc-franchises-genres .c-franchises .cc {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(200, max-content);
+    padding-bottom: 340%;
+  }
+}
+
+.p-achievements-index .cc-franchises-genres .c-franchises .b-badge.level-0, 
+.p-achievements-index .cc-franchises-genres .c-franchises .b-badge.level-1 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+
+
+/* Отображене названий достижений при наведении курсора */
+.p-achievements-index .c-franchises .b-badge::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.p-achievements-index .c-franchises .b-badge::after, 
+.p-achievements-index .c-franchises .b-badge::before {
+  text-shadow: #000000 1px 1px 0, #000000 -1px 1px 0, #000000 1px -1px 0, #000000 -1px -1px 0;
+  transition: 0.25s ease-in-out;
+  transform: translate3d(0, 100%, 0);
+}
+
+.p-achievements-index .c-franchises .b-badge.b-tooltipped.level-1::after {
+  visibility: hidden;
+}
+
+.p-achievements-index .c-franchises .b-badge:hover::after, 
+.p-achievements-index .c-franchises .b-badge:hover::before {
+  transform: none;
+}
+
+.p-achievements-global .cc-2 .b-achievement.is-badge::before,
+.cc-authors .b-achievement.is-badge::before {
+  padding: 12px 12px 6px;
+  bottom: 0;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  text-shadow: #000000 1px 1px 0, #000000 -1px 1px 0, #000000 1px -1px 0, #000000 -1px -1px 0;
+  transition: 0.25s ease-in-out;
+  transform: translate3d(0, 100%, 0);
+}
+
+.p-achievements-global .cc-2 .b-achievement.is-badge:hover::before,
+.cc-authors .b-achievement.is-badge:hover::before {
+  transform: none;
+}
+
+
+
+/* Всплывающий текст к постерам */
+.b-catalog_entry .cover .image-decor .text {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.b-catalog_entry .cover .image-decor .text:before {
+  background: transparent;
+}
+
+
+
+/* Значки прогресса */
+.b-catalog_entry.planned .image-decor::before, 
+.b-catalog_entry.watching .image-decor::before, 
+.b-catalog_entry.completed .image-decor::before, 
+.b-catalog_entry.rewatching .image-decor::before, 
+.b-catalog_entry.on_hold .image-decor::before, 
+.b-catalog_entry.dropped .image-decor::before {
+  bottom: auto !important;
+  top: 8px !important;
+  box-shadow: 0 0 10px 2px black;
+}
+
+
+
+/* Смена обложек */
+
+/* Общие настройки обложек *
+.b-catalog_entry .cover .image-cutter,
+.b-catalog_entry-tooltip > a,
+.entry-tooltip_container > .image-link {
+  background-position: top center;
+  background-size: cover;
+}
+
+/* Общие настройки обложек на станицах тайтлов *
+.p-db_entries .b-db_entry .c-poster center {
+  position: relative;
+}
+
+.p-db_entries .b-db_entry .c-poster center::after {
+  content: '';
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 225px;
+  background-position: top center;
+  background-size: cover;
+  transition: 1s ease-in-out;
+}
+
+.p-db_entries .b-db_entry .c-poster:hover center::after {
+  opacity: 0;
+}
+
+.p-db_entries .b-db_entry .c-poster img {
+  vertical-align: top;
+}
+
+/* Изменение контейнера во всплывающей подсказке *
+.b-catalog_entry-tooltip > a,
+.entry-tooltip_container > .image-link {
+  float: left;
+  width: 160px;
+  height: 250px;
+}
+
+
+/* Смена обложки – Дорохедоро (манга) *
+.b-catalog_entry > a[href *= 'mangas/1133-'] img,
+.entry-tooltip_container > .image-link[href *= 'mangas/1133-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'mangas/1133-'] .image-cutter,
+.entry-tooltip_container > .image-link[href *= 'mangas/1133-'],
+.p-db_entries meta[content *= 'mangas/1133-'] ~ .b-db_entry .c-poster center::after {
+  background-image: url(https://www.planetebd.com/dynamicImages/album/cover/large/39/36/album-cover-large-39364.jpg);
+}
+
+
+/* Смена обложки – Берсерк (манга) *
+.b-catalog_entry > a[href *= 'mangas/2-'] img,
+.entry-tooltip_container > .image-link[href *= 'mangas/2-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'mangas/2-'] .image-cutter,
+.entry-tooltip_container > .image-link[href *= 'mangas/2-'],
+.p-db_entries meta[content *= 'mangas/2-'] ~ .b-db_entry .c-poster center::after {
+  background-image: url(https://comicclandotcom.files.wordpress.com/2017/07/berrserk.jpg?w=900);
+}
+
+
+/* Смена обложки – Монстр (манга) *
+.b-catalog_entry > a[href *= 'mangas/1-'] img,
+.entry-tooltip_container > .image-link[href *= 'mangas/1-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'mangas/1-'] .image-cutter,
+.entry-tooltip_container > .image-link[href *= 'mangas/1-'],
+.p-db_entries meta[content *= 'mangas/1-'] ~ .b-db_entry .c-poster center::after {
+  background-image: url(https://koubadvd.com/wp-content/uploads/2019/05/b048f2956dbbd9e56101f17f2c615d02.jpg);
+}
+
+
+/* Смена обложки – Гатс (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/422-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/422-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/422-'] {
+  background-image: url(https://i.ibb.co/DCJBjvf/image.jpg);
+}
+
+
+/* Смена обложки – Сидзуо Хэйвадзима (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/24595-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/24595-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/24595-'] {
+  background-image: url(https://i1.sndcdn.com/avatars-000285955947-ew450o-t500x500.jpg);
+}
+
+
+/* Смена обложки – Холо (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/7373-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/7373-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/7373-'] {
+  background-image: url(https://cdn.donmai.us/sample/f8/78/__holo_spice_and_wolf_drawn_by_kawakami_rokkaku__sample-f87887566757eed6ee6b5ec78b051fc0.jpg);
+}
+
+
+/* Смена обложки – Райдер (Медуза) (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/502-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/502-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/502-'] {
+  background-image: url(https://s2.booth.pm/707bdffa-86ac-4569-af2a-3553cf0a266a/0c6560ae-8f13-4825-ad4e-49d97ba13ac6.png);
+}
+
+
+/* Смена обложки – Нодзому Итосики (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/3169-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/3169-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/3169-'] {
+  background-image: url(https://i.ibb.co/KhMFvyN/1580384958-p-proshchai-unilii-uchitel-sayonara-zetsubo-1.jpg);
+}
+
+
+/* Смена обложки – Джозеф Джостар (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/6356-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/6356-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/6356-'] {
+  background-image: url(https://i.ibb.co/9yR96VB/unnamed.jpg);
+}
+
+
+/* Смена обложки – Тоторо (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/269-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/269-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/269-'] {
+  background-image: url(https://i.pinimg.com/originals/77/f7/32/77f732973a5aad85ef2491f5160bccad.jpg);
+}
+
+
+/* Смена обложки – Гинко (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/425-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/425-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/425-'] {
+  background-image: url(https://i.ibb.co/VSq12tG/unnamed.jpg);
+}
+
+
+/* Смена обложки – Генрих Рунге (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/721-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/721-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/721-'] {
+  background-image: url(https://66.media.tumblr.com/4ffd4d2b82b7e5fe490d5c21af626b0d/tumblr_pd3ftwO6if1snewsfo2_1280.jpg);
+}
+
+
+/* Смена обложки – Вольфганг Гриммер (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/3096-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/3096-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/3096-'] {
+  background-image: url(https://img.fireden.net/cm/image/1502/85/1502850245646.png);
+}
+
+
+/* Смена обложки – Сики Рёги (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/3105-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/3105-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/3105-'] {
+  background-image: url(https://cs9.pikabu.ru/post_img/2018/01/12/6/151575020915264833.png);
+}
+
+
+/* Смена обложки – Дэйсю Кайки (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/53641-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/53641-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/53641-'] {
+  background-image: url(https://i.pinimg.com/originals/e0/22/f4/e022f45d4c68395ad436f36ba7be4609.png);
+}
+
+
+/* Смена обложки – Фредерика Гринхилл (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/17789-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/17789-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/17789-'] {
+  background-image: url(https://i.ibb.co/1RtjsXk/Frederica2.jpg);
+}
+
+
+/* Смена обложки – Вэньли Ян (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/2780-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/2780-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/2780-'] {
+  background-image: url(https://cs10.pikabu.ru/post_img/big/2019/11/15/9/1573827271115142464.jpg);
+}
+
+
+/* Смена обложки – Райнхард фон Лоэнграмм (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/3066-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/3066-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/3066-'] {
+  background-image: url(https://i.ibb.co/pZWThQ1/photo-2020-07-03-22-36-02-1.jpg);
+}
+
+
+/* Смена обложки – Пауль фон Оберштайн (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/12898-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/12898-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/12898-'] {
+  background-image: url(https://i.ibb.co/vj5fZSL/Paul.jpg);
+}
+
+
+/* Смена обложки – Цумуги Котобуки (персонаж) *
+[class *= 'b-catalog_entry'] > a[href *= 'characters/19568-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'characters/19568-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'characters/19568-'] {
+  background-image: url(https://i.ibb.co/9TGqzrV/mugi-2.jpg);
+}
+
+
+/* Смена обложки – Хаяо Миядзаки (человек) *
+[class *= 'b-catalog_entry'] > a[href *= 'people/1870-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'people/1870-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'people/1870-'] {
+  background-image: url(https://artchive.ru/res/media/img/oy1200/article/543/287615@2x.jpg);
+}
+
+
+/* Смена обложки – Дзёдзи Наката (человек) *
+[class *= 'b-catalog_entry'] > a[href *= 'people/91-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'people/91-'] .image-cutter,
+.b-catalog_entry-tooltip > a[href *= 'people/91-'] {
+  background-image: url(https://you-anime.ru/peoples-images/91.jpg?3);
+}
+
+
+/* Смена обложки – Непутёвый ученик в школе магии (ранобэ) *
+.b-catalog_entry > a[href *= 'ranobe/z34127-'] img,
+.entry-tooltip_container > .image-link[href *= 'ranobe/z34127-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'ranobe/z34127-'] .image-cutter,
+.entry-tooltip_container > .image-link[href *= 'ranobe/z34127-'],
+.p-db_entries meta[content *= 'ranobe/z34127-'] ~ .b-db_entry .c-poster center::after {
+  background-image: url(https://i.ibb.co/tx8WrkH/Vol16-LN-Cover.jpg);
+}
+
+
+/* Смена обложки – Волчица и пряности (ранобэ) *
+.b-catalog_entry > a[href *= 'ranobe/9115-'] img,
+.entry-tooltip_container > .image-link[href *= 'ranobe/9115-'] img {
+  opacity: 0;
+}
+.b-catalog_entry a[href *= 'ranobe/9115-'] .image-cutter,
+.entry-tooltip_container > .image-link[href *= 'ranobe/9115-'],
+.p-db_entries meta[content *= 'ranobe/9115-'] ~ .b-db_entry .c-poster center::after {
+  background-image: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1458495287l/26030712.jpg);
+}
+
+
+
+
+
+
+/* Подключение допольнительных шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: "Segoe Print"; 
+  src: url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.eot"); 
+  src: url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff") format("woff"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.svg#Segoe Print") format("svg"); 
+}
+
+@font-face {
+  font-family: "Heiti SC"; 
+  src: url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.eot"); 
+  src: url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.woff") format("woff"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.svg#Heiti SC") format("svg"); 
+}
+
+@font-face {
+  font-family: "Heiti SC Light"; 
+  src: url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.eot"); 
+  src: url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.woff") format("woff"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.svg#Heiti SC") format("svg"); 
+}
+
+@font-face {
+  font-family: "Emirates Bold"; 
+  src: url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.eot"); 
+  src: url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.woff") format("woff"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.svg#Emirates Bold") format("svg"); 
+}
+
+@font-face {
+  font-family: "DejaVu Sans Mono"; 
+  src: url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.eot"); 
+  src: url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.woff") format("woff"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.svg#DejaVu Sans Mono") format("svg"); 
+}
