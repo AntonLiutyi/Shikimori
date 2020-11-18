@@ -1,0 +1,90 @@
+/* Активность */
+.p-profiles .lifetime .bar,
+.p-profiles .lifetime .times {
+	display: none;
+}
+
+.p-profiles .lifetime .title>.label {
+    font-size: 0;
+    line-height: 0;
+}
+
+.p-profiles .lifetime .title>.label: : before {
+    content: 'Активность';
+    display: block;
+}
+
+
+
+/* Вкладки */
+.u-tabs>div:not([data-tab]) {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-y: auto;
+}
+
+.u-tabs [data-tab-switch] {
+	display: block;
+	flex-shrink: 0;
+	min-width: 148px;
+	padding: 4px 14px;
+	margin: 8px;
+	border: 2px solid var(--color-border);
+	border-radius: 18px;
+	color: var(--color-text-hint);
+	font-weight: bold;
+	line-height: 24px;
+	text-align: center;
+	cursor: pointer;
+	transition: .24s ease;
+	user-select: none;
+}
+
+.u-tabs [data-tab-switch].active {
+	background: var(--color-overlay-primary-selected);
+	border-color: var(--color-primary);
+	color: var(--color-primary);
+	cursor: default;
+}
+
+.u-tabs [data-tab] {
+	padding: 12px 8px;
+	overflow: hidden;
+}
+
+.u-tabs.--centered [data-tab-switch]:first-child {
+	margin-left: auto;
+}
+
+.u-tabs.--centered [data-tab-switch]:last-child {
+	margin-right: auto;
+}
+
+.u-tabs.--anorva [data-tab-switch] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	min-width: 96px;
+	padding: 4px;
+	margin: 4px 0;
+	background: transparent;
+	border: 0;
+	font-size: .875em;
+}
+
+.u-tabs.--anorva [data-tab-switch]::before {
+	display: block;
+	margin: 4px auto;
+	transition: transform .2s ease-in-out;
+}
+
+.u-tabs.--anorva [data-tab-switch]:hover::before,
+.u-tabs.--anorva [data-tab-switch].active::before {
+	transform: translateY(-4px);
+}
+
+.u-tabs.--anorva [data-tab-switch]::after {
+	background: var(--color-overlay-primary-pressed);
+}
