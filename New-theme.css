@@ -41,7 +41,7 @@
 
 
 /* Вкладки */
-u-tabs>div:not([data-tab]) {
+.u-tabs>div:not([data-tab]) {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
