@@ -25,7 +25,8 @@
 
 /* Активность */
 .p-profiles .lifetime .bar,
-.p-profiles .lifetime .times {
+.p-profiles .lifetime .times,
+.p-profiles .activity .title {
 	display: none;
 }
 
@@ -37,6 +38,8 @@
 .p-profiles .lifetime .title>.label::before {
 	content: 'Активность';
 	display: block;
+	font-size: 0.875rem;
+	line-height: 1rem;
 }
 
 
