@@ -1,3 +1,28 @@
+:root {
+	--color-black: #212121;
+	--color-white: #fafafa;
+	--color-info: #4f91e8;
+	--color-success: #66bb6a;
+	--color-warning: #ef8d50;
+	--color-danger: #ef5350;
+	--color-offtop: #f58ebb;
+	--color-violet: #a64fe8;
+	--color-yellow: #e8dc4f;
+	--color-magenta: #e84fde;
+	--layout-gutter: 16px;
+	--layout-margin: 16px;
+	--u-grid: 8px;
+	--l-gutter: 16px;
+	--l-margin: 16px;
+	--l-avatar: 40px;
+	--l-sticky--top: 56px;
+	--border-round: 50%;
+	--border-rounded: 3px;
+	--font-size: 16px;
+	--word-spacing: .375em;
+}
+
+
 /* Активность */
 .p-profiles .lifetime .bar,
 .p-profiles .lifetime .times {
@@ -5,19 +30,18 @@
 }
 
 .p-profiles .lifetime .title>.label {
-    font-size: 0;
-    line-height: 0;
+	font-size: 0;
+	line-height: 0;
 }
 
 .p-profiles .lifetime .title>.label::before {
-    content: 'Активность';
-    display: block;
+	content: 'Активность';
+	display: block;
 }
 
 
-
 /* Вкладки */
-.u-tabs>div:not([data-tab]) {
+u-tabs>div:not([data-tab]) {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
