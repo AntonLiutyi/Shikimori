@@ -1,12 +1,3 @@
-/* Основной файл */
-@import url(https://shiki-theme.web.app/import/main.css);
-/* Стили обложки профиля */
-@import url(https://shiki-theme.web.app/import/profile-cover.css);
-/* Фиксированные размеры постеров */
-@import url(https://css-club.web.app/css/fixed_cover.min.css);
-
-
-
 /* Настройки переменных темы */
 @media { 
   :root {
