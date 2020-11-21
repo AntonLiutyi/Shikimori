@@ -17,6 +17,12 @@
 }
 
 
+/* Заголовок "О себе" */
+.l-page .profile-content .about.block > div:nth-last-child(3) {
+  display: none;
+}
+
+
 /* Активность */
 .p-profiles .lifetime {
 	margin-bottom: 0;
