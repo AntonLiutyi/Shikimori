@@ -274,7 +274,7 @@ h3 {
 }
 
 .activity .graph.vertical .line .bar:hover {
-  transform: none !important;
+  transform: translateY(1px) !important;
 }
 
 .activity .graph.vertical .line:nth-child(1) .bar { animation-delay: -6.8s; }
