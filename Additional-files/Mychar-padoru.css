@@ -1,0 +1,66 @@
+.mychar.padoru {
+  content: '';
+  display: inline-block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: url("https://i.ibb.co/PDxDZXW/merge-from-ofoct.png") 0 0 no-repeat;
+  background-size: 400%;
+  pointer-events: none;
+  transform-origin: left bottom;
+  animation: padoru 50s linear 10s infinite both;
+}
+
+@media screen and (max-width: 480px) {
+  .mychar.padoru {
+    width: 26vw;
+    height: 26vw;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .mychar.padoru {
+    width: 22vw;
+    height: 22vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .mychar.padoru {
+    width: 19vw;
+    height: 19vw;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1023px) {
+  .mychar.padoru {
+    width: 17vw;
+    height: 17vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mychar.padoru {
+    width: 16vw;
+    height: 16vw;
+  }
+}
+
+@keyframes padoru {
+  0%, 14%, 27.5%, 41.5%, 100% { opacity: 1; }
+  3%, 8%, 33.5%, 38.5%        { opacity: 0; }
+  
+  0%, 41.5%, 100% { left: 0; }
+  8%, 14%, 33.5%  { left: -32vw; }
+  24%             { left: 48vw; }
+  27.5%, 33.4999% { left: 100vw; }
+  
+  24.0%, 24.8%, 25.6%, 26.4%, 27.2%, 28.0% { bottom: 0; }
+  24.4%, 25.2%, 26.0%, 26.8%, 27.6%        { bottom: 2.5vw; }
+  
+  19.75%, 19.9999%,   20.75%, 20.9999%,   21.75%, 21.9999%,   22.75%, 22.9999%,   23.75%  { background-position: 0%; }
+  20.00%, 20.2499%,   21.00%, 21.2499%,   22.00%, 22.2499%,   23.00%, 23.2499%            { background-position: 33.3333%; }
+  20.25%, 20.4999%,   21.25%, 21.4999%,   22.25%, 22.4999%,   23.25%, 23.4999%            { background-position: 66.6666%; }
+  20.50%, 20.7499%,   21.50%, 21.7499%,   22.50%, 22.7499%,   23.50%, 23.7499%            { background-position: 100%; }
+}
