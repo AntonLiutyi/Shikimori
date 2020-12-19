@@ -29,7 +29,12 @@
 }
 
 
-/* Вкладки */
+/* Вкладки в блоке "О себе" */
+.u-tabs [data-tab] {
+	padding: 12px 8px;
+	overflow: hidden;
+}
+
 .u-tabs > div:not([data-tab]) {
 	display: flex;
 	flex-direction: row;
@@ -38,63 +43,43 @@
 }
 
 .u-tabs [data-tab-switch] {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	flex-shrink: 0;
-	min-width: 148px;
-	padding: 4px 14px;
-	margin: 8px;
-	border: 2px solid var(--color-border);
-	border-radius: 18px;
-	color: var(--color-text-hint);
-	font-weight: bold;
-	line-height: 24px;
-	text-align: center;
-	cursor: pointer;
+	justify-content: flex-end;
+	align-items: center;
+	min-width: 96px;
+	padding: 4px;
+	margin: 4px 0;
 	transition: 0.25s ease-in-out;
+	cursor: pointer;
 	user-select: none;
 	opacity: 0.5;
 }
 
-.u-tabs [data-tab-switch].active {
-	background: var(--color-overlay-primary-selected);
-	border-color: var(--color-primary);
+.u-tabs [data-tab-switch] .b-button {
+	background-color: transparent;
 	color: var(--color-primary);
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 24px;
+}
+
+.u-tabs [data-tab-switch].active {
 	cursor: default;
 	transition: 0.25s ease-in-out;
 	opacity: 1;
 }
 
-.u-tabs [data-tab] {
-	padding: 12px 8px;
-	overflow: hidden;
-}
-
-.u-tabs.--centered [data-tab-switch]:first-child {
+.u-tabs [data-tab-switch]:first-child {
 	margin-left: auto;
 }
 
-.u-tabs.--centered [data-tab-switch]:last-child {
+.u-tabs [data-tab-switch]:last-child {
 	margin-right: auto;
 }
-
-.u-tabs.--anorva [data-tab-switch] {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	min-width: 96px;
-	padding: 4px;
-	margin: 4px 0;
-	background: transparent;
-	border: 0;
-	font-size: .875em;
-}
-
-.u-tabs.--anorva [data-tab-switch]::before {
-	display: block;
-	margin: 4px auto;
-}
-
 
 @media (min-width: 768px) {
 	.u-tabs [data-tab-switch]:hover {
@@ -106,6 +91,33 @@
 		transform: none;
 		opacity: 1;
 	}
+}
+
+
+/* Иконки на вкладках */
+[data-icon]::before {
+	content: attr(data-icon);
+	display: inline-block;
+	vertical-align: top;
+	flex-shrink: 0;
+	margin-right: 8px;
+	margin-left: -4px;
+	width: 1em !important;
+	font-family: 'Material Icons' !important;
+	font-size: 24px !important;
+	font-style: normal;
+	font-weight: 400 !important;
+	line-height: 1 !important;
+	letter-spacing: normal;
+	text-transform: none;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+	overflow: hidden;
 }
 
 
@@ -325,7 +337,7 @@
 }
 
 
-/* Настройки колонок и не только для блока "О себе" */
+/* Настройки колонок ширины 8 для блока "О себе" */
 @media screen and (max-width: 480px) {
 	.cc-8-g15 > .c-column {
 		width: 23.875%;
@@ -349,6 +361,8 @@
 	}
 }
 
+
+/* Настройки колонок ширины 4 для блока "О себе" */
 @media screen and (max-width: 480px) {
 	.cc-4 > .c-column {
 		margin-bottom: 2%;
