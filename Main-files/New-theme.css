@@ -90,6 +90,11 @@
 	font-size: .875em;
 }
 
+.u-tabs.--anorva [data-tab-switch]::before {
+	display: block;
+	margin: 4px auto;
+}
+
 
 @media (min-width: 768px) {
 	.u-tabs [data-tab-switch]:hover {
