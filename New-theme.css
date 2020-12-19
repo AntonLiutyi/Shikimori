@@ -92,15 +92,15 @@
 
 
 @media (min-width: 768px) {
-  .u-tabs [data-tab-switch]:hover {
-    transform: translateY(-7px);
-    opacity: 0.65;
-  }
-  
-  .u-tabs .active[data-tab-switch]:hover {
-    transform: none;
-    opacity: 1;
-  }
+	.u-tabs [data-tab-switch]:hover {
+		transform: translateY(-7px);
+		opacity: 0.65;
+	}
+	
+	.u-tabs .active[data-tab-switch]:hover {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 
@@ -320,26 +320,26 @@
 }
 
 
-/* Настройки постеров в блоке "О себе" */
+/* Настройки колонок для блока "О себе" */
 @media screen and (max-width: 480px) {
-	.cc-8-g15>.c-column {
+	.cc-8-g15 > .c-column {
 		width: 23.875%;
 	}
 	
-	.cc-8-g15>.c-column:nth-child(3n) {
+	.cc-8-g15 > .c-column:nth-child(3n) {
 		margin-right: 1.5%;
 	}
   
-	.cc-8-g15>.c-column:nth-child(3n+1) {
+	.cc-8-g15 > .c-column:nth-child(3n+1) {
 		clear: none;
 	}
   
-	.cc-8-g15>.c-column:nth-child(4n) {
+	.cc-8-g15 > .c-column:nth-child(4n) {
 		margin-right: 0;
 	}
 	
 	
-	.cc-8-g15>.c-column:nth-child(4n+1) {
+	.cc-8-g15 > .c-column:nth-child(4n+1) {
 		clear: left;
 	}
 }
