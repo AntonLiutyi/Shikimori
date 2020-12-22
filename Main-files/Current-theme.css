@@ -260,67 +260,9 @@ h3 {
 
 
 
-/* Анимированный график активности */
+/* График активности */
 .activity .graph.vertical .line .bar {
   border-radius: 30px 30px 0px 0px;
-  box-sizing: content-box;
-  transform: translateY(1px);
-  transform-origin: center bottom;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 2.5s;
-  animation-name: activity;
-}
-
-.activity .graph.vertical .line .bar:hover {
-  transform: translateY(1px) !important;
-}
-
-.activity .graph.vertical .line:nth-child(1) .bar { animation-delay: -6.8s; }
-.activity .graph.vertical .line:nth-child(2) .bar { animation-delay: -6.6s; }
-.activity .graph.vertical .line:nth-child(3) .bar { animation-delay: -6.4s; }
-.activity .graph.vertical .line:nth-child(4) .bar { animation-delay: -6.2s; }
-.activity .graph.vertical .line:nth-child(5) .bar { animation-delay: -6.0s; }
-.activity .graph.vertical .line:nth-child(6) .bar { animation-delay: -5.8s; }
-.activity .graph.vertical .line:nth-child(7) .bar { animation-delay: -5.6s; }
-.activity .graph.vertical .line:nth-child(8) .bar { animation-delay: -5.4s; }
-.activity .graph.vertical .line:nth-child(9) .bar { animation-delay: -5.2s; }
-.activity .graph.vertical .line:nth-child(10) .bar { animation-delay: -5.0s; }
-.activity .graph.vertical .line:nth-child(11) .bar { animation-delay: -4.8s; }
-.activity .graph.vertical .line:nth-child(12) .bar { animation-delay: -4.6s; }
-.activity .graph.vertical .line:nth-child(13) .bar { animation-delay: -4.4s; }
-.activity .graph.vertical .line:nth-child(14) .bar { animation-delay: -4.2s; }
-.activity .graph.vertical .line:nth-child(15) .bar { animation-delay: -4.0s; }
-.activity .graph.vertical .line:nth-child(16) .bar { animation-delay: -3.8s; }
-.activity .graph.vertical .line:nth-child(17) .bar { animation-delay: -3.6s; }
-.activity .graph.vertical .line:nth-child(18) .bar { animation-delay: -3.4s; }
-.activity .graph.vertical .line:nth-child(19) .bar { animation-delay: -3.2s; }
-.activity .graph.vertical .line:nth-child(20) .bar { animation-delay: -3.0s; }
-.activity .graph.vertical .line:nth-child(21) .bar { animation-delay: -2.8s; }
-.activity .graph.vertical .line:nth-child(22) .bar { animation-delay: -2.6s; }
-.activity .graph.vertical .line:nth-child(23) .bar { animation-delay: -2.4s; }
-.activity .graph.vertical .line:nth-child(24) .bar { animation-delay: -2.2s; }
-.activity .graph.vertical .line:nth-child(25) .bar { animation-delay: -2.0s; }
-.activity .graph.vertical .line:nth-child(26) .bar { animation-delay: -1.8s; }
-.activity .graph.vertical .line:nth-child(27) .bar { animation-delay: -1.6s; }
-.activity .graph.vertical .line:nth-child(28) .bar { animation-delay: -1.4s; }
-.activity .graph.vertical .line:nth-child(29) .bar { animation-delay: -1.2s; }
-.activity .graph.vertical .line:nth-child(30) .bar { animation-delay: -1.0s; }
-.activity .graph.vertical .line:nth-child(31) .bar { animation-delay: -0.8s; }
-.activity .graph.vertical .line:nth-child(32) .bar { animation-delay: -0.6s; }
-.activity .graph.vertical .line:nth-child(33) .bar { animation-delay: -0.4s; }
-.activity .graph.vertical .line:nth-child(34) .bar { animation-delay: -0.2s; }
-
-@keyframes activity {
-  0%, 100% {
-    background-color: var(--color-primary);
-    transform: translateY(1px);
-  }
-  50% {
-    background-color: var(--color-primary-reduced);
-    transform: translateY(12px);
-  }
 }
 
 
