@@ -188,7 +188,7 @@ a.name:focus {
 .bar.vertical .line .bar-container .value.mini {
   color: #000000; 
   font-weight: bold;
-  font-size: 0.5em;
+  font-size: 0.7em;
 }
 
 @media (max-width: 599px) {
