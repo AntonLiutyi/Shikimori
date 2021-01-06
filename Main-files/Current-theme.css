@@ -248,11 +248,11 @@ h3 {
   visibility: hidden;
 }
 
-.l-page .profile-content .about.block > div:nth-last-child(3) {
+.l-page .profile-content .about.block > div:nth-last-child(4) {
   display: none;
 }
 
-.l-page .profile-content .about.block > div:nth-last-child(2) > a {
+.l-page .profile-content .about.block > div:nth-last-child(3) > a {
   padding: .59375rem 1rem;
   text-decoration: none;
   color: var(--color-primary);
