@@ -1,7 +1,56 @@
+/* Тело сайта */
+body {
+	position: relative;
+	min-height: 100%;
+	background-attachment: fixed;
+	background-color: var(--color-background);
+	background-image: var(--user-background);
+	background-size: cover;
+}
+
+
+/* Центральная область */
+.l-page {
+	min-height: 100%;
+	padding: 16px 24px 0;
+}
+
+
+/* Верхнее меню */
+.l-top_menu-v2 {
+	position: sticky;
+	top: 0;
+}
+
+
 /* Обложка профиля */
 .p-profiles .profile-head::before {
+	content: '';
 	display: block; 
+	height: 240px;
+	margin: -16px -24px 0;
 	background-position: center 50%;
+	background-image: var(--user-cover);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.p-profiles .profile-head::before {
+		height: 268px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+	.p-profiles .profile-head::before {
+		height: 296px;
+	}
+}
+
+@media (min-width: 960px) {
+	.p-profiles .profile-head::before {
+		height: 424px;
+	}
 }
 
 
@@ -24,7 +73,7 @@
 
 
 /* Всплывающие стрелки */
-.tipsy-arrow {
+.tipsy-arrow, .tooltip-arrow {
 	display: none;
 }
 
@@ -59,7 +108,7 @@
 
 .u-tabs [data-tab-switch] .b-button {
 	background-color: transparent;
-	color: var(--color-primary);
+	color: var(--headline-color);
 	font-size: 15px;
 	font-weight: bold;
 	text-align: center;
@@ -279,7 +328,7 @@
 }
 
 
-/* Настройки колонок ширины 8 для блока "О себе" */
+/* Настройки колонок cc-8 для блока "О себе" */
 @media screen and (max-width: 480px) {
 	.cc-8-g15 > .c-column {
 		width: 23.875%;
@@ -304,7 +353,7 @@
 }
 
 
-/* Настройки колонок ширины 4 для блока "О себе" */
+/* Настройки колонок cc-4 для блока "О себе" */
 @media screen and (max-width: 480px) {
 	.cc-4 > .c-column {
 		margin-bottom: 2%;
