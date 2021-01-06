@@ -67,7 +67,7 @@ body {
 
 
 /* Заголовок "О себе" */
-.l-page .profile-content .about.block > div:nth-last-child(3) {
+.l-page .profile-content .about.block > div:nth-last-child(4) {
 	display: none;
 }
 
