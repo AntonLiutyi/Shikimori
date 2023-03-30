@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Segoe Print"; 
+  src: url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.eot"); 
+  src: url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff") format("woff"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.svg#Segoe Print") format("svg"); 
+}
+
+@font-face {
+  font-family: "Heiti SC"; 
+  src: url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.eot"); 
+  src: url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.woff") format("woff"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c81ad37f4fe5d970a2fbccf31ba5f6f6.svg#Heiti SC") format("svg"); 
+}
+
+@font-face {
+  font-family: "Heiti SC Light"; 
+  src: url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.eot"); 
+  src: url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.woff") format("woff"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9dadd41cd8d82c6dcfecd592cfbad4e8.svg#Heiti SC") format("svg"); 
+}
+
+@font-face {
+  font-family: "Emirates Bold"; 
+  src: url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.eot"); 
+  src: url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.woff") format("woff"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/77eb99c5abc837144cabc9c07da37109.svg#Emirates Bold") format("svg"); 
+}
+
+@font-face {
+  font-family: "DejaVu Sans Mono"; 
+  src: url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.eot"); 
+  src: url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.woff") format("woff"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/57701bbb3530292347bc5e1cd217e664.svg#DejaVu Sans Mono") format("svg"); 
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v53/flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf) format("truetype"), url(https://fonts.gstatic.com/s/materialicons/v53/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
