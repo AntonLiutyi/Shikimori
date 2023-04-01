@@ -2,7 +2,7 @@
 .p-achievements-index .headline,
 .p-achievements-index .subheadline {
   color: var(--color-text-primary);
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
@@ -32,7 +32,7 @@
 .p-achievements-franchise .cc,
 .p-achievements-author .cc {
   display: grid;
-  grid-gap: 6px 6px;
+  grid-gap: 6px;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -144,7 +144,7 @@
   }
 }
 
-/* Сетка достижений (страницы "Достижения", "Франшизы" и "Авторы") */
+/* Сетка достижений (главная страница) */
 .p-profiles-show .cc-franchises,
 .p-profiles-show .cc-authors {
   display: grid;
@@ -166,7 +166,7 @@
   }
 
   .p-profiles-show .cc-franchises .b-badge::before {
-    font-size: 1rem !important;
+    font-size: 16px !important;
   }
 }
 
@@ -177,7 +177,7 @@
   }
 
   .p-profiles-show .cc-authors {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .p-profiles-show .achievements .c-column:nth-child(3),
@@ -188,11 +188,11 @@
 
   .p-profiles-show .cc-franchises .b-badge::before,
   .p-profiles-show .cc-achievements .b-achievement::before {
-    font-size: 0.875rem !important;
+    font-size: 14px !important;
   }
 
   .p-profiles-show .cc-authors .b-achievement::before {
-    font-size: 0.75rem;
+    font-size: 16px;
   }
 }
 
@@ -207,18 +207,18 @@
   }
 
   .p-profiles-show .cc-franchises .b-badge::before {
-    font-size: 0.8125rem !important;
+    font-size: 13px !important;
   }
 
   .p-profiles-show .cc-authors .b-achievement::before {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 1200px) {
 
   .p-profiles-show .cc-franchises .b-badge::before {
-    font-size: 0.875rem !important;
+    font-size: 14px !important;
   }
 }
 
@@ -337,8 +337,8 @@
   text-align: center;
   white-space: normal;
   word-break: break-word;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 16px;
+  line-height: 16px;
   transition: 0.3s ease-in-out;
   opacity: 0;
 }
@@ -371,7 +371,7 @@
 }
 
 .p-profiles-show .achievements .cc-franchises .b-badge:hover::before {
-  padding-top: 0rem;
+  padding-top: 0;
   opacity: 1;
 }
 
