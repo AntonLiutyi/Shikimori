@@ -1,0 +1,504 @@
+/* Заголовки, количество достижений и кнопки сортировки (страница "Достижения") */
+.p-achievements-index .headline,
+.p-achievements-index .subheadline {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+
+  .p-achievements-index .b-options-floated.mobile-phone {
+    position: absolute;
+    margin-top: 16px;
+  }
+
+  .p-achievements-index .subheadline.green {
+    bottom: 48px;
+  }
+
+  .p-achievements-index .subheadline-buttons {
+    position: relative;
+    text-align: right;
+    top: 40px;
+  }
+}
+
+/* Сетка достижений (страницы "Достижения", "Франшизы" и "Авторы") */
+.p-achievements-index .cc-franchises-genres .c-franchises .cc,
+.p-achievements-index .cc-authors,
+.p-achievements-franchise .cc,
+.p-achievements-author .cc {
+  display: grid;
+  grid-gap: 6px 6px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.p-achievements-index .cc-franchises-genres .c-franchises .b-badge,
+.p-achievements-index .cc-authors .b-achievement,
+.p-achievements-franchise .b-badge,
+.p-achievements-author .b-achievement {
+  display: inline-flex;
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::after,
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::before,
+  .p-achievements-index .cc-authors .b-achievement::after,
+  .p-achievements-index .cc-authors .b-achievement::before,
+  .p-achievements-franchise .b-badge::after,
+  .p-achievements-franchise .b-badge::before,
+  .p-achievements-author .b-achievement::after,
+  .p-achievements-author .b-achievement::before {
+    font-size: 11px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::after,
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::before,
+  .p-achievements-index .cc-authors .b-achievement::after,
+  .p-achievements-index .cc-authors .b-achievement::before,
+  .p-achievements-franchise .b-badge::after,
+  .p-achievements-franchise .b-badge::before,
+  .p-achievements-author .b-achievement::after,
+  .p-achievements-author .b-achievement::before {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .cc,
+  .p-achievements-index .cc-authors,
+  .p-achievements-franchise .cc,
+  .p-achievements-author .cc {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::after,
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::before,
+  .p-achievements-index .cc-authors .b-achievement::after,
+  .p-achievements-index .cc-authors .b-achievement::before,
+  .p-achievements-franchise .b-badge::after,
+  .p-achievements-franchise .b-badge::before,
+  .p-achievements-author .b-achievement::after,
+  .p-achievements-author .b-achievement::before {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .cc,
+  .p-achievements-index .cc-authors,
+  .p-achievements-franchise .cc,
+  .p-achievements-author .cc {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::after,
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::before,
+  .p-achievements-index .cc-authors .b-achievement::after,
+  .p-achievements-index .cc-authors .b-achievement::before,
+  .p-achievements-franchise .b-badge::after,
+  .p-achievements-franchise .b-badge::before,
+  .p-achievements-author .b-achievement::after,
+  .p-achievements-author .b-achievement::before {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .cc,
+  .p-achievements-franchise .cc {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::after,
+  .p-achievements-index .cc-franchises-genres .c-franchises .b-badge::before,
+  .p-achievements-index .cc-authors .b-achievement::after,
+  .p-achievements-index .cc-authors .b-achievement::before,
+  .p-achievements-franchise .b-badge::after,
+  .p-achievements-franchise .b-badge::before,
+  .p-achievements-author .b-achievement::after,
+  .p-achievements-author .b-achievement::before {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Сетка достижений (страницы "Достижения", "Франшизы" и "Авторы") */
+.p-profiles-show .cc-franchises,
+.p-profiles-show .cc-authors {
+  display: grid;
+  grid-gap: 6px;
+}
+
+.p-profiles-show .cc-franchises .b-badge,
+.p-profiles-show .cc-authors .b-achievement {
+  display: inline-flex;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+
+  .p-profiles-show .cc-franchises,
+  .p-profiles-show .cc-authors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .p-profiles-show .cc-franchises .b-badge::before {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+
+  .p-profiles-show .cc-franchises {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .p-profiles-show .cc-authors {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .p-profiles-show .achievements .c-column:nth-child(3),
+  .p-profiles-show .achievements .c-column:last-child {
+    clear: left;
+    width: 100%;
+  }
+
+  .p-profiles-show .cc-franchises .b-badge::before,
+  .p-profiles-show .cc-achievements .b-achievement::before {
+    font-size: 0.875rem !important;
+  }
+
+  .p-profiles-show .cc-authors .b-achievement::before {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+
+  .p-profiles-show .cc-franchises {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .p-profiles-show .cc-authors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .p-profiles-show .cc-franchises .b-badge::before {
+    font-size: 0.8125rem !important;
+  }
+
+  .p-profiles-show .cc-authors .b-achievement::before {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .p-profiles-show .cc-franchises .b-badge::before {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Названия и прогресс достижений при наведении курсора (страницы "Достижения", "Франшизы" и "Авторы") */
+.p-achievements-index .c-franchises .b-badge::after,
+.p-achievements-index .c-franchises .b-badge::before,
+.p-achievements-index .cc-authors .b-achievement::after,
+.p-achievements-index .cc-authors .b-achievement::before,
+.p-achievements-franchise .b-badge::after,
+.p-achievements-franchise .b-badge::before,
+.p-achievements-author .b-achievement::after,
+.p-achievements-author .b-achievement::before,
+.p-achievements-show .b-achievement.is-badge::before {
+  display: block;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 12px 12px 6px;
+  border-radius: 0 0 3px 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  white-space: normal;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 1;
+  z-index: 1;
+  text-shadow: #000000 1px 1px 0, #000000 -1px 1px 0, #000000 1px -1px 0, #000000 -1px -1px 0;
+  transition: 0.3s ease-in-out;
+  transform: translate3d(0, 100%, 0);
+}
+
+.p-achievements-index .c-franchises .b-badge:hover::after,
+.p-achievements-index .c-franchises .b-badge:hover::before,
+.p-achievements-index .cc-authors .b-achievement:hover::after,
+.p-achievements-index .cc-authors .b-achievement:hover::before,
+.p-achievements-franchise .b-badge:hover::after,
+.p-achievements-franchise .b-badge:hover::before,
+.p-achievements-author .b-achievement:hover::after,
+.p-achievements-author .b-achievement:hover::before {
+  transform: none;
+}
+
+.p-achievements-index .c-franchises .b-badge,
+.p-achievements-index .cc-authors .b-achievement,
+.p-achievements-franchise .b-badge,
+.p-achievements-author .b-achievement {
+  overflow: hidden;
+}
+
+.p-achievements-index .c-franchises .b-badge::after,
+.p-achievements-index .cc-authors .b-achievement::after,
+.p-achievements-franchise .b-badge::after,
+.p-achievements-author .b-achievement::after {
+  display: inline-block;
+  content: attr(data-progress) "%";
+  background: transparent;
+  text-align: right;
+}
+
+.p-achievements-index .c-franchises .b-badge[data-progress="100"]::after,
+.p-achievements-index .cc-authors .b-achievement[data-progress="100"]::after,
+.p-achievements-franchise .b-badge[data-progress="100"]::after,
+.p-achievements-author .b-achievement[data-progress="100"]::after {
+  display: none;
+}
+
+.p-achievements-index .c-franchises .b-badge[title]::before,
+.p-achievements-franchise .b-badge[title]::before {
+  content: attr(title);
+}
+
+.p-achievements-index .c-franchises .b-badge[original-title]::before,
+.p-achievements-franchise .b-badge[original-title]::before {
+  content: attr(original-title);
+}
+
+.p-achievements-index .cc-authors .b-achievement.is-badge::before,
+.p-achievements-author .b-achievement::before {
+  content: attr(data-hint);
+}
+
+.p-achievements-index .c-franchises .b-badge::before,
+.p-achievements-index .cc-authors .b-achievement.is-badge::before,
+.p-achievements-franchise .b-badge::before,
+.p-achievements-author .b-achievement::before {
+  background: rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.p-achievements-index .c-franchises .b-badge:not([data-progress="100"])::before,
+.p-achievements-index .cc-authors .b-achievement:not([data-progress="100"])::before,
+.p-achievements-franchise .b-badge:not([data-progress="100"])::before,
+.p-achievements-author .b-achievement:not([data-progress="100"])::before {
+  padding-right: 48px !important;
+}
+
+.p-achievements-franchise .tipsy-inner {
+  display: none;
+}
+
+/* Названия достижений при наведении курсора (главная страница) */
+.p-profiles-show .b-achievement::before,
+.p-profiles-show .achievements .cc-franchises .b-badge::before {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 1rem;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.p-profiles-show .b-achievement::before {
+  padding: 1.5rem 0.375rem 0.375rem 0.375rem;
+}
+
+.p-profiles-show .achievements .cc-franchises .b-badge::before {
+  padding: 1rem 0 0 0;
+  z-index: 0;
+}
+
+.p-profiles-show .achievements .cc-franchises .b-badge[title]::before {
+  content: attr(title);
+}
+
+.p-profiles-show .achievements .cc-franchises .b-badge[original-title]::before {
+  content: attr(original-title);
+}
+
+.p-profiles-show .b-achievement:hover::after {
+  display: none;
+}
+
+.p-profiles-show .b-achievement:hover::before {
+  padding-top: 0.375rem;
+  opacity: 1;
+}
+
+.p-profiles-show .achievements .cc-franchises .b-badge:hover::before {
+  padding-top: 0rem;
+  opacity: 1;
+}
+
+.tipsy.tipsy-normal.tipsy-s {
+  display: none !important;
+}
+
+/* Отоборажение достижений за франшизы и за авторов на их собственных страницах */
+.p-achievements-show .b-achievement.is-badge::before {
+  font-size: 14px;
+  transform: none;
+}
+
+.p-achievements-show .b-achievement.is-no_label .c-image {
+  padding-top: 66.66667%;
+}
+
+.p-achievements-show .b-achievement.is-half_sized {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 960px) {
+  .p-profiles-show .achievements > .cc-3 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(1), 
+  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(2) {
+    flex: 1 0 auto;
+    margin: 0;
+  }
+  
+  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(2) {
+    margin-left: 8px;
+  }
+  
+  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(3) {
+    width: 100%;
+  }
+  
+  .p-profiles-show .achievements .cc-achievements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+  
+  .p-profiles-show .achievements .cc-franchises {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+  
+  .p-profiles-show .achievements .cc-achievements .b-achievement,
+  .p-profiles-show .achievements .cc-franchises .b-badge {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .p-profiles-show .b-achievement.is-badge:before {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .p-profiles-show .achievements .cc-franchises {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+  
+  .p-profiles-show .achievements .cc-franchises .b-badge {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.profile-content .block.achievements .cc-authors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px 8px;
+}
+
+@media (min-width: 480px) {
+  .profile-content .block.achievements .cc-authors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.profile-content .block.achievements .cc-authors .b-achievement {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+
+
+
+
+
