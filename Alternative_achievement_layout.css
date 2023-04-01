@@ -321,7 +321,7 @@
 }
 
 .p-achievements-franchise .tipsy-inner {
-  display: none;
+  display: none !important;
 }
 
 /* Названия достижений при наведении курсора (главная страница) */
@@ -348,6 +348,7 @@
 }
 
 .p-profiles-show .achievements .cc-franchises .b-badge::before {
+  box-sizing: border-box;
   padding: 1rem 0 0 0;
   z-index: 0;
 }
@@ -374,6 +375,7 @@
   opacity: 1;
 }
 
+.tipsy.tipsy-medium.tipsy-s,
 .tipsy.tipsy-normal.tipsy-s {
   display: none !important;
 }
@@ -391,114 +393,3 @@
 .p-achievements-show .b-achievement.is-half_sized {
   width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 960px) {
-  .p-profiles-show .achievements > .cc-3 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(1), 
-  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(2) {
-    flex: 1 0 auto;
-    margin: 0;
-  }
-  
-  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(2) {
-    margin-left: 8px;
-  }
-  
-  .p-profiles-show .achievements > .cc-3 > .c-column:nth-child(3) {
-    width: 100%;
-  }
-  
-  .p-profiles-show .achievements .cc-achievements {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px;
-  }
-  
-  .p-profiles-show .achievements .cc-franchises {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 8px;
-  }
-  
-  .p-profiles-show .achievements .cc-achievements .b-achievement,
-  .p-profiles-show .achievements .cc-franchises .b-badge {
-    width: 100%;
-    margin: 0;
-  }
-  
-  .p-profiles-show .b-achievement.is-badge:before {
-    font-size: 1rem !important;
-  }
-}
-
-@media (max-width: 479px) {
-  .p-profiles-show .achievements .cc-franchises {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px;
-  }
-  
-  .p-profiles-show .achievements .cc-franchises .b-badge {
-    width: 100%;
-    margin: 0;
-  }
-}
-
-.profile-content .block.achievements .cc-authors {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px 8px;
-}
-
-@media (min-width: 480px) {
-  .profile-content .block.achievements .cc-authors {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.profile-content .block.achievements .cc-authors .b-achievement {
-  width: 100%;
-  margin-bottom: 0;
-}
-
-
-
-
-
-
