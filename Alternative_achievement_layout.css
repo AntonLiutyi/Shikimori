@@ -165,8 +165,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .p-profiles-show .cc-franchises .b-badge::before {
-    font-size: 16px !important;
+  .p-profiles-show .cc-franchises .b-badge::before,
+  .p-profiles-show .cc-achievements .b-achievement::before,
+  .p-profiles-show .cc-authors .b-achievement::before {
+    font-size: 14px !important;
   }
 }
 
@@ -187,12 +189,9 @@
   }
 
   .p-profiles-show .cc-franchises .b-badge::before,
-  .p-profiles-show .cc-achievements .b-achievement::before {
-    font-size: 14px !important;
-  }
-
+  .p-profiles-show .cc-achievements .b-achievement::before,
   .p-profiles-show .cc-authors .b-achievement::before {
-    font-size: 16px;
+    font-size: 14px !important;
   }
 }
 
@@ -210,6 +209,7 @@
     font-size: 13px !important;
   }
 
+  .p-profiles-show .cc-achievements .b-achievement::before,
   .p-profiles-show .cc-authors .b-achievement::before {
     font-size: 14px;
   }
@@ -337,8 +337,6 @@
   text-align: center;
   white-space: normal;
   word-break: break-word;
-  font-size: 16px;
-  line-height: 16px;
   transition: 0.3s ease-in-out;
   opacity: 0;
 }
