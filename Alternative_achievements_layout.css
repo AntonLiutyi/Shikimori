@@ -1,6 +1,8 @@
-/* Заголовки, количество достижений и кнопки сортировки (страница "Достижения") */
+/* Заголовки, количество достижений и кнопки сортировки (страницы "Достижения", "Франшизы" и "Авторы") */
 .p-achievements-index .headline,
-.p-achievements-index .subheadline {
+.p-achievements-index .subheadline,
+.p-achievements-franchise .subheadline,
+.p-achievements-author .subheadline {
   color: var(--color-text-primary);
   font-size: 16px;
   font-weight: bold;
@@ -10,16 +12,22 @@
 
 @media screen and (max-width: 767px) {
 
-  .p-achievements-index .b-options-floated.mobile-phone {
+  .p-achievements-index .b-options-floated.mobile-phone,
+  .p-achievements-franchise .b-options-floated.mobile-phone,
+  .p-achievements-author .b-options-floated.mobile-phone {
     position: absolute;
     margin-top: 16px;
   }
 
-  .p-achievements-index .subheadline.green {
+  .p-achievements-index .subheadline.green,
+  .p-achievements-franchise .subheadline,
+  .p-achievements-author .subheadline {
     bottom: 48px;
   }
 
-  .p-achievements-index .subheadline-buttons {
+  .p-achievements-index .subheadline-buttons,
+  .p-achievements-franchise .subheadline-buttons,
+  .p-achievements-author .subheadline-buttons {
     position: relative;
     text-align: right;
     top: 40px;
