@@ -34,3 +34,8 @@
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/materialicons/v53/flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf) format("truetype"), url(https://fonts.gstatic.com/s/materialicons/v53/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
 }
+
+@font-face {
+  font-family: "Konstanting"; 
+  src: url("https://github.com/AntonLiutyi/Shikimori/raw/master/fonts/Konstanting-Regular.woff") format("woff"); 
+}
