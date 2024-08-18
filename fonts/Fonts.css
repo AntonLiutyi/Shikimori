@@ -39,3 +39,8 @@
   font-family: "Konstanting"; 
   src: url("https://github.com/AntonLiutyi/Shikimori/raw/master/fonts/Konstanting-Regular.woff") format("woff"); 
 }
+
+@font-face {
+  font-family: "Heiti SC Medium V2";
+  src: url("https://github.com/AntonLiutyi/Shikimori/raw/master/fonts/Heiti SC Medium V2.woff") format("woff");
+}
